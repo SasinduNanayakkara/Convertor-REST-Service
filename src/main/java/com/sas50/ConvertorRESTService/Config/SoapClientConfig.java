@@ -20,7 +20,7 @@ public class SoapClientConfig {
     }
 
     public static void initConvetorService() throws Exception {
-        URL endpointURL = new URL("http://localhost:8083/ConvertorWebService_war_exploded/binary-decimal?wsdl");
+        URL endpointURL = new URL(convertorServiceUrl);
         Service service = new org.sas50.convertorwebservice.BinaryToDecimalConvertorImplServiceLocator();
         stub = new BinaryToDecimalConvertorImplPortBindingStub(endpointURL, service);
 
